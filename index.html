@@ -328,7 +328,7 @@
     box-shadow: 0 12px 40px rgba(0, 212, 255, 0.1);
   }
 
-  .cve-card.medium { border-top-color: #ffaa00; }
+  .cve-card.medium { border-top-color: var(--accent3); }
   .cve-card.low { border-top-color: var(--accent2); }
 
   .cve-id {
@@ -340,7 +340,7 @@
     margin-bottom: 0.4rem;
   }
 
-  .cve-card.medium .cve-id { color: #ffaa00; }
+  .cve-card.medium .cve-id { color: var(--accent3); }
   .cve-card.low .cve-id { color: var(--accent2); }
 
   .cve-target {
@@ -369,7 +369,7 @@
     color: var(--accent);
   }
 
-  .tag.orange { background: rgba(255,170,0,0.08); border-color: rgba(255,170,0,0.2); color: #ffaa00; }
+  .tag.orange { background: rgba(255,60,110,0.08); border-color: rgba(255,60,110,0.2); color: var(--accent3); }
   .tag.green { background: rgba(0,255,136,0.08); border-color: rgba(0,255,136,0.2); color: var(--accent2); }
   .tag.red { background: rgba(255,60,110,0.08); border-color: rgba(255,60,110,0.2); color: var(--accent3); }
 
@@ -428,6 +428,7 @@
   }
 
   .project-card.robin { border-top-color: #a855f7; }
+  .project-card.cve { border-top-color: var(--accent3); }
 
   .project-card:hover {
     transform: translateY(-5px);
@@ -440,6 +441,11 @@
     border-color: #a855f7;
   }
 
+  .project-card.cve:hover {
+    box-shadow: 0 16px 48px rgba(255, 60, 110, 0.12);
+    border-color: var(--accent3);
+  }
+
   .project-card::before {
     content: '';
     position: absolute;
@@ -450,6 +456,10 @@
 
   .project-card.robin::before {
     background: linear-gradient(135deg, rgba(168,85,247,0.04) 0%, transparent 60%);
+  }
+
+  .project-card.cve::before {
+    background: linear-gradient(135deg, rgba(255,60,110,0.04) 0%, transparent 60%);
   }
 
   .project-header {
@@ -466,6 +476,7 @@
   }
 
   .project-card.robin .project-number { color: #a855f7; }
+  .project-card.cve .project-number { color: var(--accent3); }
 
   .project-title {
     font-family: var(--head);
@@ -549,6 +560,7 @@
   }
 
   .project-card.robin .project-features li::before { color: #a855f7; }
+  .project-card.cve .project-features li::before { color: var(--accent3); }
 
   .project-footer {
     padding: 1rem 1.8rem 1.6rem;
@@ -578,6 +590,9 @@
 
   .project-link.purple { color: #c084fc; border-color: rgba(168,85,247,0.3); }
   .project-link.purple:hover { background: rgba(168,85,247,0.08); border-color: #a855f7; }
+
+  .project-link.red { color: var(--accent3); border-color: rgba(255,60,110,0.3); }
+  .project-link.red:hover { background: rgba(255,60,110,0.08); border-color: var(--accent3); }
 
   /* FINDING DETAIL CARDS (upgraded) */
   .finding-detail-grid {
@@ -865,6 +880,8 @@
     margin-bottom: 0.4rem;
   }
 
+  .stat-number.accentg { color: var(--accent3); }
+
   .stat-label {
     font-family: var(--mono);
     font-size: 0.65rem;
@@ -1096,12 +1113,12 @@
   <div class="hero-role">CVE Researcher &nbsp;|&nbsp; Security Researcher &nbsp;|&nbsp; Bug Hunter</div>
 
   <p class="hero-desc">
-    Independent security researcher with 3 CVEs on the US National Vulnerability Database — including findings in PhonePe, Airtel & Meesho (100M+ users). Cited by CISA-ADP. Self-taught, results-proven.
+    Independent security researcher with 5 CVEs on the US National Vulnerability Database — across PhonePe, Airtel, Meesho, Groww & Moovit, collectively impacting 1B+ users. 2x cited by CISA-ADP. Self-taught, results-proven.
   </p>
 
   <div class="hero-badges">
-    <span class="badge"><span class="dot"></span>3x NVD CVE Holder</span>
-    <span class="badge"><span class="dot"></span>CISA-ADP Cited</span>
+    <span class="badge"><span class="dot"></span>5x NVD CVE Holder</span>
+    <span class="badge"><span class="dot"></span>2x CISA-ADP Cited</span>
     <span class="badge"><span class="dot"></span>HackerOne / Bugcrowd</span>
     <span class="badge"><span class="dot"></span>India — Remote Ready</span>
   </div>
@@ -1117,24 +1134,24 @@
 <div style="position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 2rem;">
   <div class="stats-bar reveal">
     <div class="stat-box">
-      <div class="stat-number">3</div>
+      <div class="stat-number">5</div>
       <div class="stat-label">Published CVEs</div>
     </div>
     <div class="stat-box">
-      <div class="stat-number">100M+</div>
+      <div class="stat-number">1B+</div>
       <div class="stat-label">Users Impacted</div>
     </div>
     <div class="stat-box">
-      <div class="stat-number">2+</div>
+      <div class="stat-number">4+</div>
       <div class="stat-label">Live Projects</div>
     </div>
     <div class="stat-box">
-      <div class="stat-number">5+</div>
+      <div class="stat-number">7+</div>
       <div class="stat-label">Major Targets</div>
     </div>
     <div class="stat-box">
-      <div class="stat-number accentg">CISA</div>
-      <div class="stat-label">ADP Cited</div>
+      <div class="stat-number accentg">2x</div>
+      <div class="stat-label">CISA-ADP Cited</div>
     </div>
   </div>
 </div>
@@ -1157,7 +1174,7 @@
         <span class="tag">CWE-313</span>
       </div>
       <p class="cve-desc">
-        Discovered cleartext storage of authentication tokens, KYC metadata (Aadhaar, PAN), and bank account details in unencrypted SQLite databases. Attack path enables token replay → full account takeover without OTP or MFA, affecting 100M+ users.
+        Discovered cleartext storage of authentication tokens, KYC metadata (Aadhaar, PAN), and bank account details in unencrypted SQLite databases. Attack path enables token replay → full account takeover without OTP or MFA, affecting 700M+ users.
       </p>
       <div class="cisa-badge">🇺🇸 Referenced by CISA-ADP as exploit source</div>
       <br>
@@ -1192,6 +1209,39 @@
         Identified weak/broken cryptographic algorithm in API communication layer with a network-based attack vector (AV:N). Remote exploitation possible under high complexity — broader attack surface than local-only findings.
       </p>
       <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-5682" target="_blank" class="cve-link">→ View on NVD ↗</a>
+    </div>
+
+    <!-- CVE-4 -->
+    <div class="cve-card medium reveal">
+      <div class="cve-id">CVE-2026-12065</div>
+      <div class="cve-target">Groww Android App (50M+ users)</div>
+      <div class="cve-meta">
+        <span class="tag green">CVSS 1.8 LOW</span>
+        <span class="tag">CWE-285</span>
+        <span class="tag">CWE-939</span>
+      </div>
+      <p class="cve-desc">
+        Discovered improper authorization in WebView URL handler and weak client-side app-lock enforcement, allowing arbitrary external URLs to render inside a trusted application context.
+      </p>
+      <div class="cisa-badge">🇺🇸 Referenced by CISA-ADP as exploit source</div>
+      <br>
+      <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-12065" target="_blank" class="cve-link">→ View on NVD ↗</a>
+    </div>
+
+    <!-- CVE-5 -->
+    <div class="cve-card medium reveal">
+      <div class="cve-id">CVE-2026-12189</div>
+      <div class="cve-target">Moovit Bus &amp; Public Transit App 1.18</div>
+      <div class="cve-meta">
+        <span class="tag orange">CVSS 5.3 MEDIUM</span>
+        <span class="tag">CWE-939</span>
+        <span class="tag">CWE-285</span>
+        <span class="tag">CWE-266</span>
+      </div>
+      <p class="cve-desc">
+        Discovered an exported, browsable WebView activity (com.moovit.web.WebViewActivity) that accepts externally supplied URLs without domain validation — exploitable via crafted intents or deep links for phishing and UI spoofing. Highest CVSS score to date.
+      </p>
+      <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-12189" target="_blank" class="cve-link">→ View on NVD ↗</a>
     </div>
   </div>
 </section>
@@ -1238,10 +1288,77 @@
       </div>
     </div>
 
-    <!-- PROJECT 02 — Robin AI OSINT -->
+    <!-- PROJECT 02 — Groww CVE -->
+    <div class="project-card cve reveal">
+      <div class="project-header">
+        <div class="project-number">// PROJECT 02 — CVE-2026-12065</div>
+        <div class="project-title">Groww Android App<br>WebView &amp; Deep Link Vulnerability</div>
+        <div class="project-meta-row">
+          <span class="project-tag red">CISA-ADP Cited</span>
+          <span class="project-tag red">WebView</span>
+          <span class="project-tag blue">CWE-285</span>
+          <span class="project-tag blue">CWE-939</span>
+        </div>
+      </div>
+      <div class="project-terminal">
+        <div class="pt-line"><span class="pt-key" style="color:var(--accent3)">[*] Target</span><span class="pt-val">Groww — Stock, Mutual Fund &amp; Gold App (50M+ users)</span></div>
+        <div class="pt-line"><span class="pt-key" style="color:var(--accent3)">[*] Vuln</span><span class="pt-val">Improper Authorization in WebView URL Handler</span></div>
+        <div class="pt-line"><span class="pt-key" style="color:var(--accent3)">[*] Impact</span><span class="pt-val">Arbitrary external URLs rendered in trusted app context, weak app-lock</span></div>
+        <div class="pt-line"><span class="pt-key" style="color:var(--accent3)">[*] Disclose</span><span class="pt-val">Responsible disclosure via VulDB — vendor contacted early</span></div>
+        <div class="pt-line success"><span class="pt-key" style="color:var(--accent3)">[✔] Status</span><span class="pt-success" style="color:var(--accent3)">PUBLISHED ON NVD — CISA-ADP CITED</span></div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc">Referenced by CISA-ADP — the US Government's cybersecurity agency — as an exploit source. Demonstrates internal WebView activity invocation under privileged debug conditions, with rendering of attacker-controlled content inside a trusted application context.</p>
+        <ul class="project-features">
+          <li>Identified internal WebView activity invokable in privileged ADB/debug environment</li>
+          <li>Confirmed arbitrary external URL rendering with JavaScript execution in trusted context</li>
+          <li>Found weak client-side app-lock enforcement allowing navigation without passcode re-validation</li>
+        </ul>
+      </div>
+      <div class="project-footer">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-12065" target="_blank" class="project-link red">→ View on NVD ↗</a>
+        <a href="https://github.com/honestcorrupt/Groww-Android-Application-Unsafe-WebView-URL-Handling-Weak-Client-Side-App-Lock-Enforcement.git" target="_blank" class="project-link red">⌥ GitHub Repo ↗</a>
+      </div>
+    </div>
+
+    <!-- PROJECT 03 — Moovit CVE -->
+    <div class="project-card cve reveal">
+      <div class="project-header">
+        <div class="project-number">// PROJECT 03 — CVE-2026-12189</div>
+        <div class="project-title">Moovit Android App<br>Insecure Deep Link &amp; WebView Hijacking</div>
+        <div class="project-meta-row">
+          <span class="project-tag red">CVSS 5.3</span>
+          <span class="project-tag red">Deep Link Hijack</span>
+          <span class="project-tag blue">CWE-939</span>
+          <span class="project-tag blue">CWE-285</span>
+          <span class="project-tag blue">CWE-266</span>
+        </div>
+      </div>
+      <div class="project-terminal">
+        <div class="pt-line"><span class="pt-key" style="color:var(--accent3)">[*] Target</span><span class="pt-val">Moovit — Bus &amp; Public Transit App v1.18</span></div>
+        <div class="pt-line"><span class="pt-key" style="color:var(--accent3)">[*] Vuln</span><span class="pt-val">Improper Authorization in Handler for Custom URL Scheme</span></div>
+        <div class="pt-line"><span class="pt-key" style="color:var(--accent3)">[*] Impact</span><span class="pt-val">Exported WebView loads attacker URLs — phishing &amp; UI spoofing</span></div>
+        <div class="pt-line"><span class="pt-key" style="color:var(--accent3)">[*] Disclose</span><span class="pt-val">PoC published — vendor contacted, no response</span></div>
+        <div class="pt-line success"><span class="pt-key" style="color:var(--accent3)">[✔] Status</span><span class="pt-success" style="color:var(--accent3)">PUBLISHED ON NVD — HIGHEST CVSS YET</span></div>
+      </div>
+      <div class="project-body">
+        <p class="project-desc"><code style="color:var(--accent);font-family:var(--mono);font-size:0.82em;">com.moovit.web.WebViewActivity</code> is exported and browsable — accepts external URLs via crafted intents or deep links with zero domain validation, rendering attacker content inside the trusted app interface.</p>
+        <ul class="project-features">
+          <li>Discovered exported, browsable WebView activity accepting unvalidated external URLs</li>
+          <li>Crafted PoC using ADB intent to demonstrate arbitrary URL loading</li>
+          <li>Highest CVSS score (5.3) across all 5 published CVEs</li>
+        </ul>
+      </div>
+      <div class="project-footer">
+        <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-12189" target="_blank" class="project-link red">→ View on NVD ↗</a>
+        <a href="https://github.com/honestcorrupt/MOOVIT-CVE-.git" target="_blank" class="project-link red">⌥ GitHub Repo ↗</a>
+      </div>
+    </div>
+
+    <!-- PROJECT 04 — Robin AI OSINT -->
     <div class="project-card robin reveal">
       <div class="project-header">
-        <div class="project-number">// PROJECT 02</div>
+        <div class="project-number">// PROJECT 04</div>
         <div class="project-title">Robin — AI-Powered Dark Web<br>OSINT & Threat Intel Tool</div>
         <div class="project-meta-row">
           <span class="project-tag purple">Gemini API</span>
@@ -1256,7 +1373,7 @@
         <div class="pt-line"><span class="pt-key" style="color:#a855f7">[*] AI Stack</span><span class="pt-val">Google Gemini API + Ollama (local privacy LLM)</span></div>
         <div class="pt-line"><span class="pt-key" style="color:#a855f7">[*] Frontend</span><span class="pt-val">Streamlit — clean analyst interface</span></div>
         <div class="pt-line"><span class="pt-key" style="color:#a855f7">[*] Use Case</span><span class="pt-val">Blue team / SOC / threat hunting / academic research</span></div>
-        <div class="pt-line"><span class="pt-key" style="color:#c084fc">[✔] Status</span><span class="pt-success" style="color:#c084fc">BUILT & OPERATIONAL</span></div>
+        <div class="pt-line success"><span class="pt-key" style="color:#c084fc">[✔] Status</span><span class="pt-success" style="color:#c084fc">BUILT & OPERATIONAL</span></div>
       </div>
       <div class="project-body">
         <p class="project-desc">Robin integrates LLMs to refine investigation queries, assist with dark-web content discovery, and improve analyst workflows — all while maintaining OPSEC-focused research practices. Built as a hands-on initiative inspired by modern AI-assisted security research.</p>
@@ -1346,11 +1463,11 @@
       <ul class="timeline-list">
         <li>Conducted manual Android and web application penetration tests on live production apps</li>
         <li>Performed static analysis (JADX, MobSF) and dynamic analysis (Frida, ADB) on Android APKs</li>
-        <li>Discovered and reported 3 CVEs published on NVD — affecting apps with 100M+ combined users</li>
+        <li>Discovered and reported 5 CVEs published on NVD — affecting apps with 1B+ combined users</li>
         <li>Developed detailed PoC reports with reproduction steps, impact assessment, and remediation guidance</li>
         <li>Submitted responsible disclosures via VulDB, Bugcrowd, HackerOne, and direct vendor contact</li>
         <li>Managed full CVE lifecycle: discovery → PoC → disclosure → CVE request → NVD publication</li>
-        <li>Cited by CISA-ADP (US Government cybersecurity agency) as exploit research source</li>
+        <li>Cited by CISA-ADP (US Government cybersecurity agency) as exploit research source — 2x citations</li>
       </ul>
     </div>
   </div>
@@ -1412,7 +1529,7 @@
 
   <div class="reveal" style="background:var(--surface);border:1px solid var(--border);padding:2rem;font-family:var(--body);">
     <div class="section-tag" style="margin-bottom:0.8rem;">Bug Bounty Platforms</div>
-    <p style="color:var(--text-dim);font-size:0.95rem;">Active researcher on <strong style="color:var(--text)">HackerOne</strong> and <strong style="color:var(--text)">Bugcrowd</strong>. Targets tested include apps from Google Play with 10M–500M+ installs. Findings reported against <span style="color:var(--accent)">PhonePe, Airtel, Meesho, Flipkart, Canva,</span> and <span style="color:var(--accent)">Google Photos</span>.</p>
+    <p style="color:var(--text-dim);font-size:0.95rem;">Active researcher on <strong style="color:var(--text)">HackerOne</strong> and <strong style="color:var(--text)">Bugcrowd</strong>. Targets tested include apps from Google Play with 10M–700M+ installs. Findings reported against <span style="color:var(--accent)">PhonePe, Airtel, Meesho, Groww, Moovit, Flipkart, Canva,</span> and <span style="color:var(--accent)">Google Photos</span>.</p>
   </div>
 </section>
 
